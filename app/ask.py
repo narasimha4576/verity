@@ -3,7 +3,6 @@ import sys
 from app.answer import answer_question
 
 result = answer_question(" ".join(sys.argv[1:]))
-print(result["answer"])
-print("\nPages searched:")
+print(f"[{result['status']}] {result['answer']}")
 for s in result["sources"]:
-    print(f"  {s['source']} page {s['page']} (score {s['score']:.2f})")
+    print(f"  source: {s['source']} page {s['page']}")
