@@ -58,3 +58,19 @@ def test_validation_error_does_not_leak_technical_details():
 
     with pytest.raises(VerityError, match="could not be processed"):
         ask("", client=make_client(handler))
+
+
+def test_ask_sends_the_history():
+    seen = {}
+
+    def handler(request):
+        seen["body"] = request.content
+        return httpx.Response(
+            200,
+            json={"status": "answered", "answer": "10%", "sources": [], "question_used": "q"},
+        )
+
+    history = [{"role": "user", "content": "co-payment"}]
+    ask("and for seniors?", history=history, client=make_client(handler))
+    assert b'"history"' in seen["body"]
+    assert b"co-payment" in seen["body"]

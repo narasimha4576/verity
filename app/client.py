@@ -44,5 +44,6 @@ def upload_pdf(name, data, client=None):
     return _request("POST", "/upload", client=client, files=files)
 
 
-def ask(question, client=None):
-    return _request("POST", "/ask", client=client, json={"question": question})
+def ask(question, history=None, client=None):
+    body = {"question": question, "history": history or []}
+    return _request("POST", "/ask", client=client, json=body)

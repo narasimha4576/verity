@@ -27,6 +27,9 @@ with st.sidebar:
                 st.error(str(exc))
     for name in st.session_state.uploaded:
         st.write(f"- {name}")
+    if st.button("Clear chat"):
+        st.session_state.messages = []
+        st.rerun()
 
 
 def render(message):
@@ -34,8 +37,19 @@ def render(message):
         st.write(message["content"])
         for source in message.get("sources", []):
             st.caption(f"Source: {source['source']}, page {source['page']}")
+        if message.get("searched_for"):
+            st.caption(f"Searched for: {message['searched_for']}")
         if message.get("status") not in (None, "answered"):
             st.caption(f"status: {message['status']}")
+
+
+def build_history():
+    """Previous turns only. Error messages are not sent as history."""
+    return [
+        {"role": m["role"], "content": m["content"]}
+        for m in st.session_state.messages
+        if m["role"] == "user" or m.get("status")
+    ]
 
 
 for message in st.session_state.messages:
@@ -43,17 +57,20 @@ for message in st.session_state.messages:
 
 question = st.chat_input("Ask about your documents")
 if question:
+    history = build_history()
     user_message = {"role": "user", "content": question}
     st.session_state.messages.append(user_message)
     render(user_message)
     try:
         with st.spinner("Searching your documents..."):
-            result = ask(question)
+            result = ask(question, history=history)
+        used = result.get("question_used")
         reply = {
             "role": "assistant",
             "content": result["answer"],
             "sources": result["sources"],
             "status": result["status"],
+            "searched_for": used if used and used != question else None,
         }
     except VerityError as exc:
         reply = {"role": "assistant", "content": str(exc), "sources": []}
