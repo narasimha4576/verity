@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Annotated, Literal
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
-from fastapi.responses import StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel, Field, field_validator
 from pypdf.errors import PdfReadError
 
@@ -18,6 +18,7 @@ from app.retry import is_temporary
 from app.store import VectorStore
 
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+STATIC_DIR = Path(__file__).parent / "static"
 
 logger = logging.getLogger("verity")
 app = FastAPI(title="Verity")
@@ -183,3 +184,9 @@ def ask_stream(
         sources=body.sources,
     )
     return StreamingResponse(_event_lines(events), media_type="application/x-ndjson")
+
+
+
+@app.get("/", include_in_schema=False)
+def index():
+    return FileResponse(STATIC_DIR / "index.html")

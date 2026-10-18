@@ -32,7 +32,7 @@ Every answer has a status: `answered`, `not_found`, `low_similarity`, `ungrounde
     python -m app.ingest data\your.pdf
     uvicorn app.main:app --reload
 
-Open http://127.0.0.1:8000/docs to upload a PDF and ask questions.
+Open http://127.0.0.1:8000 for the chat screen. The API docs are at /docs.
 
 ## Status and roadmap
 
