@@ -118,7 +118,7 @@ def refuse(status, question):
     }
 
 
-def answer_question(
+def answer_events(
     question,
     store=None,
     embed=embed_texts,
@@ -128,36 +128,61 @@ def answer_question(
     history=None,
     rewriter=rewrite_generate,
 ):
+    """Yield progress events, then one final result event.
+    The answer is verified before it is sent, so unchecked text is never shown."""
     if min_score is None:
         min_score = float(os.getenv("MIN_SCORE", "0.55"))
     store = store or VectorStore()
+
+    if history:
+        yield {"event": "stage", "message": "Understanding your question"}
     standalone = standalone_question(question, history, rewriter)
+
+    yield {"event": "stage", "message": "Searching your documents"}
     query_vector = embed([standalone], task_type="RETRIEVAL_QUERY")[0]
     hits = [h for h in store.search(query_vector, k=k) if h["score"] >= min_score]
 
     # Layer 1: nothing relevant, so do not call the AI at all
     if not hits:
-        return refuse("low_similarity", standalone)
+        yield {"event": "result", "result": refuse("low_similarity", standalone)}
+        return
+
+    yield {"event": "stage", "message": "Writing and checking the answer"}
 
     # Layer 2: the output must be valid JSON in the expected shape
     try:
         parsed = ModelAnswer.model_validate_json(llm(build_prompt(standalone, hits)))
     except ValidationError:
-        return refuse("invalid_output", standalone)
+        yield {"event": "result", "result": refuse("invalid_output", standalone)}
+        return
 
     if not parsed.found:
-        return refuse("not_found", standalone)
+        yield {"event": "result", "result": refuse("not_found", standalone)}
+        return
 
     # Layer 3: every citation must point at an excerpt the AI really saw
     seen = {(h["source"], h["page"]) for h in hits}
     cited = {(c.source, c.page) for c in parsed.citations}
     if not cited or not cited <= seen:
-        return refuse("ungrounded", standalone)
+        yield {"event": "result", "result": refuse("ungrounded", standalone)}
+        return
 
     sources = [{"source": s, "page": p} for s, p in sorted(cited)]
-    return {
-        "status": "answered",
-        "answer": parsed.answer,
-        "sources": sources,
-        "question_used": standalone,
+    yield {
+        "event": "result",
+        "result": {
+            "status": "answered",
+            "answer": parsed.answer,
+            "sources": sources,
+            "question_used": standalone,
+        },
     }
+
+
+def answer_question(*args, **kwargs):
+    """Run the whole pipeline and return only the final result."""
+    result = None
+    for event in answer_events(*args, **kwargs):
+        if event["event"] == "result":
+            result = event["result"]
+    return result

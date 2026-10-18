@@ -1,3 +1,4 @@
+import json
 import os
 
 import httpx
@@ -47,3 +48,24 @@ def upload_pdf(name, data, client=None):
 def ask(question, history=None, client=None):
     body = {"question": question, "history": history or []}
     return _request("POST", "/ask", client=client, json=body)
+
+
+def ask_stream(question, history=None, client=None):
+    """Yield events from /ask/stream as they arrive."""
+    own_client = client is None
+    if own_client:
+        client = httpx.Client(base_url=API_URL, timeout=60)
+    body = {"question": question, "history": history or []}
+    try:
+        with client.stream("POST", "/ask/stream", json=body) as response:
+            if response.status_code >= 400:
+                response.read()
+                raise VerityError(_friendly(response))
+            for line in response.iter_lines():
+                if line.strip():
+                    yield json.loads(line)
+    except httpx.TransportError:
+        raise VerityError("Cannot reach the Verity API. Is it running?") from None
+    finally:
+        if own_client:
+            client.close()

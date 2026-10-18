@@ -1,3 +1,5 @@
+import json
+import logging
 import os
 from collections.abc import Callable
 from functools import lru_cache
@@ -5,10 +7,11 @@ from pathlib import Path
 from typing import Annotated, Literal
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 from pypdf.errors import PdfReadError
 
-from app.answer import answer_question, generate, rewrite_generate
+from app.answer import answer_events, answer_question, generate, rewrite_generate
 from app.embedder import embed_texts
 from app.ingest import ingest
 from app.retry import is_temporary
@@ -16,6 +19,7 @@ from app.store import VectorStore
 
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 
+logger = logging.getLogger("verity")
 app = FastAPI(title="Verity")
 
 
@@ -116,3 +120,38 @@ def ask(
                 503, "The AI service is busy. Please try again shortly."
             ) from None
         raise
+
+
+def _event_lines(events):
+    """Send each event as one JSON line. Once streaming has started the HTTP
+    status cannot change, so failures become an error event. Internal details
+    are logged on the server and never sent to the user."""
+    try:
+        for event in events:
+            yield json.dumps(event) + "\n"
+    except Exception as exc:
+        if is_temporary(exc):
+            message = "The AI service is busy. Please try again shortly."
+        else:
+            logger.exception("Unexpected error while answering")
+            message = "Something went wrong. Please try again."
+        yield json.dumps({"event": "error", "message": message}) + "\n"
+
+
+@app.post("/ask/stream")
+def ask_stream(
+    body: AskRequest,
+    store: StoreDep,
+    embed: EmbedDep,
+    llm: LlmDep,
+    rewriter: RewriterDep,
+):
+    events = answer_events(
+        body.question,
+        store=store,
+        embed=embed,
+        llm=llm,
+        history=[t.model_dump() for t in body.history],
+        rewriter=rewriter,
+    )
+    return StreamingResponse(_event_lines(events), media_type="application/x-ndjson")

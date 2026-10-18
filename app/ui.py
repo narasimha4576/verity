@@ -1,6 +1,8 @@
+import time
+
 import streamlit as st
 
-from app.client import VerityError, ask, upload_pdf
+from app.client import VerityError, ask_stream, upload_pdf
 
 st.set_page_config(page_title="Verity", page_icon="??")
 st.title("Verity")
@@ -32,15 +34,26 @@ with st.sidebar:
         st.rerun()
 
 
+def show_details(message):
+    for source in message.get("sources", []):
+        st.caption(f"Source: {source['source']}, page {source['page']}")
+    if message.get("searched_for"):
+        st.caption(f"Searched for: {message['searched_for']}")
+    if message.get("status") not in (None, "answered"):
+        st.caption(f"status: {message['status']}")
+
+
 def render(message):
     with st.chat_message(message["role"]):
         st.write(message["content"])
-        for source in message.get("sources", []):
-            st.caption(f"Source: {source['source']}, page {source['page']}")
-        if message.get("searched_for"):
-            st.caption(f"Searched for: {message['searched_for']}")
-        if message.get("status") not in (None, "answered"):
-            st.caption(f"status: {message['status']}")
+        show_details(message)
+
+
+def type_out(text):
+    """Type an already verified answer out word by word."""
+    for word in text.split(" "):
+        yield word + " "
+        time.sleep(0.02)
 
 
 def build_history():
@@ -61,18 +74,33 @@ if question:
     user_message = {"role": "user", "content": question}
     st.session_state.messages.append(user_message)
     render(user_message)
-    try:
-        with st.spinner("Searching your documents..."):
-            result = ask(question, history=history)
-        used = result.get("question_used")
-        reply = {
-            "role": "assistant",
-            "content": result["answer"],
-            "sources": result["sources"],
-            "status": result["status"],
-            "searched_for": used if used and used != question else None,
-        }
-    except VerityError as exc:
-        reply = {"role": "assistant", "content": str(exc), "sources": []}
+
+    with st.chat_message("assistant"):
+        status = st.status("Starting...", expanded=False)
+        try:
+            result = None
+            for event in ask_stream(question, history=history):
+                if event["event"] == "stage":
+                    status.update(label=event["message"])
+                elif event["event"] == "result":
+                    result = event["result"]
+                elif event["event"] == "error":
+                    raise VerityError(event["message"])
+            if result is None:
+                raise VerityError("No answer was returned. Please try again.")
+            status.update(label="Done", state="complete")
+            st.write_stream(type_out(result["answer"]))
+            used = result.get("question_used")
+            reply = {
+                "role": "assistant",
+                "content": result["answer"],
+                "sources": result["sources"],
+                "status": result["status"],
+                "searched_for": used if used and used != question else None,
+            }
+            show_details(reply)
+        except VerityError as exc:
+            status.update(label="Failed", state="error")
+            st.write(str(exc))
+            reply = {"role": "assistant", "content": str(exc), "sources": []}
     st.session_state.messages.append(reply)
-    render(reply)
