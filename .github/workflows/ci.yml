@@ -20,3 +20,24 @@ jobs:
         run: ruff check .
       - name: Test
         run: pytest
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t verity:ci .
+      - name: Smoke test
+        run: |
+          docker run -d --name verity -p 8000:8000 verity:ci
+          for i in $(seq 1 30); do
+            if curl -fs http://localhost:8000/health > /dev/null; then
+              curl -fs http://localhost:8000/ | grep -q Verity
+              docker rm -f verity
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs verity
+          exit 1

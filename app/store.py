@@ -1,8 +1,11 @@
+import os
+
 import chromadb
 
 
 class VectorStore:
-    def __init__(self, path="chroma_db", name="verity"):
+    def __init__(self, path=None, name="verity"):
+        path = path or os.getenv("CHROMA_PATH", "chroma_db")
         self.client = chromadb.PersistentClient(path=str(path))
         self.collection = self.client.get_or_create_collection(
             name=name, metadata={"hnsw:space": "cosine"}
@@ -63,3 +66,4 @@ class VectorStore:
                 "score": 1 - dist,  # cosine similarity: higher is closer
             })
         return hits
+

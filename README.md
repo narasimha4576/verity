@@ -40,3 +40,10 @@ Done: ingestion, retrieval, grounded answers, checks, API, tests, CI.
 Next: chat screen, Docker, benchmark, guarded web-search fallback.
 
 All sample documents are fake.
+
+## Run with Docker
+
+    copy .env.example .env      # then fill in your Gemini key and model
+    docker compose up -d --build
+
+Open http://127.0.0.1:8000. Documents are kept in a Docker volume, so they survive restarts. The app listens on your own computer only, and your key is read at run time and is never copied into the image.
