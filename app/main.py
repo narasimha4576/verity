@@ -8,7 +8,7 @@ from typing import Annotated, Literal
 
 from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from pypdf.errors import PdfReadError
 
 from app.answer import answer_events, answer_question, generate, rewrite_generate
@@ -31,6 +31,14 @@ class Turn(BaseModel):
 class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=500)
     history: list[Turn] = Field(default_factory=list, max_length=20)
+    sources: list[str] | None = Field(default=None, max_length=20)
+
+    @field_validator("sources")
+    @classmethod
+    def names_must_be_short(cls, value):
+        if value and any(len(name) > 255 for name in value):
+            raise ValueError("document name is too long")
+        return value
 
 
 @lru_cache
@@ -97,6 +105,24 @@ def upload(
     return {"filename": name, "chunks": chunks}
 
 
+@app.get("/documents")
+def documents(store: StoreDep):
+    return {"documents": store.list_sources()}
+
+
+@app.delete("/documents/{name}")
+def delete_document(name: str, store: StoreDep, upload_dir: DirDep):
+    removed = store.delete_source(name)
+    if removed == 0:
+        raise HTTPException(404, "Document not found.")
+    # Only names that were really stored reach this line, and they came from
+    # sanitised upload names, so this can only touch a file inside upload_dir
+    path = upload_dir / name
+    if Path(name).name == name and path.is_file():
+        path.unlink()
+    return {"filename": name, "chunks_removed": removed}
+
+
 @app.post("/ask")
 def ask(
     body: AskRequest,
@@ -113,6 +139,7 @@ def ask(
             llm=llm,
             history=[t.model_dump() for t in body.history],
             rewriter=rewriter,
+            sources=body.sources,
         )
     except Exception as exc:
         if is_temporary(exc):
@@ -153,5 +180,6 @@ def ask_stream(
         llm=llm,
         history=[t.model_dump() for t in body.history],
         rewriter=rewriter,
+        sources=body.sources,
     )
     return StreamingResponse(_event_lines(events), media_type="application/x-ndjson")

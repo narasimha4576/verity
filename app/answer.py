@@ -127,6 +127,7 @@ def answer_events(
     min_score=None,
     history=None,
     rewriter=rewrite_generate,
+    sources=None,
 ):
     """Yield progress events, then one final result event.
     The answer is verified before it is sent, so unchecked text is never shown."""
@@ -140,7 +141,7 @@ def answer_events(
 
     yield {"event": "stage", "message": "Searching your documents"}
     query_vector = embed([standalone], task_type="RETRIEVAL_QUERY")[0]
-    hits = [h for h in store.search(query_vector, k=k) if h["score"] >= min_score]
+    hits = [h for h in store.search(query_vector, k=k, sources=sources) if h["score"] >= min_score]
 
     # Layer 1: nothing relevant, so do not call the AI at all
     if not hits:
@@ -186,3 +187,4 @@ def answer_question(*args, **kwargs):
         if event["event"] == "result":
             result = event["result"]
     return result
+

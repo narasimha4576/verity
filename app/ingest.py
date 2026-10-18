@@ -13,7 +13,9 @@ def ingest(path, store=None, embed=embed_texts):
     if not chunks:
         return 0
     store = store or VectorStore()
-    store.add_chunks(chunks, embed([c["text"] for c in chunks]))
+    # Embed first: if this fails, the old version of the document stays intact
+    vectors = embed([c["text"] for c in chunks])
+    store.replace_source(path.name, chunks, vectors)
     return len(chunks)
 
 

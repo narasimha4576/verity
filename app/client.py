@@ -1,5 +1,6 @@
 import json
 import os
+from urllib.parse import quote
 
 import httpx
 
@@ -45,17 +46,32 @@ def upload_pdf(name, data, client=None):
     return _request("POST", "/upload", client=client, files=files)
 
 
-def ask(question, history=None, client=None):
+def list_documents(client=None):
+    return _request("GET", "/documents", client=client)["documents"]
+
+
+def delete_document(name, client=None):
+    return _request("DELETE", f"/documents/{quote(name, safe='')}", client=client)
+
+
+def _ask_body(question, history, sources):
     body = {"question": question, "history": history or []}
+    if sources:
+        body["sources"] = sources
+    return body
+
+
+def ask(question, history=None, sources=None, client=None):
+    body = _ask_body(question, history, sources)
     return _request("POST", "/ask", client=client, json=body)
 
 
-def ask_stream(question, history=None, client=None):
+def ask_stream(question, history=None, sources=None, client=None):
     """Yield events from /ask/stream as they arrive."""
     own_client = client is None
     if own_client:
         client = httpx.Client(base_url=API_URL, timeout=60)
-    body = {"question": question, "history": history or []}
+    body = _ask_body(question, history, sources)
     try:
         with client.stream("POST", "/ask/stream", json=body) as response:
             if response.status_code >= 400:

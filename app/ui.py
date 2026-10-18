@@ -2,7 +2,13 @@ import time
 
 import streamlit as st
 
-from app.client import VerityError, ask_stream, upload_pdf
+from app.client import (
+    VerityError,
+    ask_stream,
+    delete_document,
+    list_documents,
+    upload_pdf,
+)
 
 st.set_page_config(page_title="Verity", page_icon="??")
 st.title("Verity")
@@ -14,7 +20,7 @@ st.caption(
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "uploaded" not in st.session_state:
-    st.session_state.uploaded = []
+    st.session_state.uploaded = set()
 
 with st.sidebar:
     st.header("Documents")
@@ -23,12 +29,31 @@ with st.sidebar:
         with st.spinner("Reading and indexing..."):
             try:
                 result = upload_pdf(file.name, file.getvalue())
-                st.session_state.uploaded.append(file.name)
+                st.session_state.uploaded.add(file.name)
                 st.success(f"{result['filename']}: {result['chunks']} chunks")
             except VerityError as exc:
                 st.error(str(exc))
-    for name in st.session_state.uploaded:
-        st.write(f"- {name}")
+
+    try:
+        docs = list_documents()
+    except VerityError as exc:
+        docs = []
+        st.error(str(exc))
+
+    names = [d["source"] for d in docs]
+    selected = st.multiselect("Search in (empty = all documents)", names)
+
+    for doc in docs:
+        left, right = st.columns([3, 1])
+        left.write(f"{doc['source']} ({doc['chunks']} chunks)")
+        if right.button("Remove", key=f"remove-{doc['source']}"):
+            try:
+                delete_document(doc["source"])
+                st.session_state.uploaded.discard(doc["source"])
+                st.rerun()
+            except VerityError as exc:
+                st.error(str(exc))
+
     if st.button("Clear chat"):
         st.session_state.messages = []
         st.rerun()
@@ -39,6 +64,8 @@ def show_details(message):
         st.caption(f"Source: {source['source']}, page {source['page']}")
     if message.get("searched_for"):
         st.caption(f"Searched for: {message['searched_for']}")
+    if message.get("scope"):
+        st.caption(f"Searched in: {', '.join(message['scope'])}")
     if message.get("status") not in (None, "answered"):
         st.caption(f"status: {message['status']}")
 
@@ -79,7 +106,7 @@ if question:
         status = st.status("Starting...", expanded=False)
         try:
             result = None
-            for event in ask_stream(question, history=history):
+            for event in ask_stream(question, history=history, sources=selected or None):
                 if event["event"] == "stage":
                     status.update(label=event["message"])
                 elif event["event"] == "result":
@@ -97,6 +124,7 @@ if question:
                 "sources": result["sources"],
                 "status": result["status"],
                 "searched_for": used if used and used != question else None,
+                "scope": selected or None,
             }
             show_details(reply)
         except VerityError as exc:
