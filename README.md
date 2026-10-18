@@ -4,6 +4,8 @@
 
 A document assistant that answers from your PDFs, cites the page, and says "not found" instead of guessing.
 
+![Verity answering a question with a page citation](docs/screenshot.png)
+
 ## How it works
 
 1. **Load and chunk:** each PDF page is split into overlapping chunks that keep their page number.
@@ -13,6 +15,22 @@ A document assistant that answers from your PDFs, cites the page, and says "not 
 5. **Verify:** code checks the similarity score, the JSON shape and that every cited page was really retrieved.
 
 Every answer has a status: `answered`, `not_found`, `low_similarity`, `ungrounded` or `invalid_output`.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    UI[Chat page] --> API[FastAPI]
+    PDF[PDF upload] --> API
+    API --> CE[Chunk and embed]
+    CE --> DB[(ChromaDB)]
+    API --> RW[Rewrite follow-up question]
+    RW --> S[Search chosen documents]
+    DB --> S
+    S --> LLM[Gemini answers from excerpts as JSON]
+    LLM --> CHK[Checks: score, JSON shape, citations]
+    CHK --> UI
+```
 
 ## Design decisions
 
@@ -47,3 +65,4 @@ All sample documents are fake.
     docker compose up -d --build
 
 Open http://127.0.0.1:8000. Documents are kept in a Docker volume, so they survive restarts. The app listens on your own computer only, and your key is read at run time and is never copied into the image.
+

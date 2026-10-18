@@ -12,6 +12,7 @@ from app.store import VectorStore
 load_dotenv()
 
 NOT_FOUND = "I could not find this in your documents."
+NO_DOCUMENTS = "You have not added any documents yet. Add a PDF, then ask again."
 MAX_HISTORY = 6
 MAX_MESSAGE_CHARS = 500
 MAX_REWRITE_CHARS = 300
@@ -134,6 +135,17 @@ def answer_events(
     if min_score is None:
         min_score = float(os.getenv("MIN_SCORE", "0.55"))
     store = store or VectorStore()
+    if store.count() == 0:
+        yield {
+            "event": "result",
+            "result": {
+                "status": "no_documents",
+                "answer": NO_DOCUMENTS,
+                "sources": [],
+                "question_used": question,
+            },
+        }
+        return
 
     if history:
         yield {"event": "stage", "message": "Understanding your question"}
@@ -187,4 +199,5 @@ def answer_question(*args, **kwargs):
         if event["event"] == "result":
             result = event["result"]
     return result
+
 
