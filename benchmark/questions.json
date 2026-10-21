@@ -1,0 +1,1026 @@
+[
+  {
+    "id": "PF01",
+    "category": "policy_fact",
+    "question": "What is the annual sum insured for an individual?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "5,00,000"
+      ]
+    ]
+  },
+  {
+    "id": "PF02",
+    "category": "policy_fact",
+    "question": "How much is the sum insured for a family floater?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10,00,000"
+      ]
+    ]
+  },
+  {
+    "id": "PF03",
+    "category": "policy_fact",
+    "question": "How many days of pre-hospitalisation expenses are covered?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days",
+        "thirty days"
+      ]
+    ]
+  },
+  {
+    "id": "PF04",
+    "category": "policy_fact",
+    "question": "How long after discharge are post-hospitalisation expenses covered?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "60 days",
+        "sixty days"
+      ]
+    ]
+  },
+  {
+    "id": "PF05",
+    "category": "policy_fact",
+    "question": "What is the room rent limit per day?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "1%"
+      ]
+    ]
+  },
+  {
+    "id": "PF06",
+    "category": "policy_fact",
+    "question": "What is the limit on intensive care unit charges per day?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "PF07",
+    "category": "policy_fact",
+    "question": "How much does the policy reimburse for ambulance charges?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "2,000"
+      ]
+    ]
+  },
+  {
+    "id": "PF08",
+    "category": "policy_fact",
+    "question": "What is the initial waiting period of the policy?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days",
+        "thirty days"
+      ]
+    ]
+  },
+  {
+    "id": "PF09",
+    "category": "policy_fact",
+    "question": "How long is the waiting period for pre-existing diseases?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "36 months",
+        "three years",
+        "3 years"
+      ]
+    ]
+  },
+  {
+    "id": "PF10",
+    "category": "policy_fact",
+    "question": "Which illnesses have a 24 month waiting period?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "hernia"
+      ],
+      [
+        "kidney stones"
+      ]
+    ]
+  },
+  {
+    "id": "PF11",
+    "category": "policy_fact",
+    "question": "How much is the maternity cover and when does it start?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "50,000"
+      ],
+      [
+        "24 months",
+        "two years",
+        "2 years"
+      ]
+    ]
+  },
+  {
+    "id": "PF12",
+    "category": "policy_fact",
+    "question": "Is dental treatment covered?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "excluded",
+        "not covered",
+        "not payable",
+        "not cover"
+      ],
+      [
+        "accident"
+      ]
+    ]
+  },
+  {
+    "id": "PF13",
+    "category": "policy_fact",
+    "question": "How many hours before planned treatment must the insurer be told for a cashless claim?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "48 hours",
+        "two days",
+        "2 days"
+      ]
+    ]
+  },
+  {
+    "id": "PF14",
+    "category": "policy_fact",
+    "question": "What co-payment applies to policyholders aged 60 and above?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "10%"
+      ]
+    ]
+  },
+  {
+    "id": "PF15",
+    "category": "policy_fact",
+    "question": "Within how many days of discharge must a reimbursement claim be submitted?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "15 days"
+      ]
+    ]
+  },
+  {
+    "id": "PF16",
+    "category": "policy_fact",
+    "question": "How many days does the insurer have to settle or reject a complete claim?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "PF17",
+    "category": "policy_fact",
+    "question": "Within how many days of receiving the policy can it be cancelled for a refund?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "15 days"
+      ]
+    ]
+  },
+  {
+    "id": "LF01",
+    "category": "loan_fact",
+    "question": "What is the loan amount?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10,00,000"
+      ]
+    ]
+  },
+  {
+    "id": "LF02",
+    "category": "loan_fact",
+    "question": "What is the interest rate on the loan?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10.5%"
+      ]
+    ]
+  },
+  {
+    "id": "LF03",
+    "category": "loan_fact",
+    "question": "What is the loan tenure?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "5 years",
+        "five years",
+        "60 monthly",
+        "60 instalments",
+        "60 months"
+      ]
+    ]
+  },
+  {
+    "id": "LF04",
+    "category": "loan_fact",
+    "question": "What is the processing fee?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "1%"
+      ]
+    ]
+  },
+  {
+    "id": "LF05",
+    "category": "loan_fact",
+    "question": "On which day of the month is the EMI due?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "5th",
+        "fifth"
+      ]
+    ]
+  },
+  {
+    "id": "LF06",
+    "category": "loan_fact",
+    "question": "How is the EMI collected?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "auto-debit",
+        "auto debit",
+        "automatic"
+      ]
+    ]
+  },
+  {
+    "id": "LF07",
+    "category": "loan_fact",
+    "question": "Is the loan insurance cover compulsory?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "optional",
+        "not compulsory",
+        "not mandatory",
+        "decline"
+      ]
+    ]
+  },
+  {
+    "id": "LF08",
+    "category": "loan_fact",
+    "question": "After how many months can the borrower make a part-prepayment?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "6 months",
+        "six months"
+      ]
+    ]
+  },
+  {
+    "id": "LF09",
+    "category": "loan_fact",
+    "question": "What is the prepayment charge?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "LF10",
+    "category": "loan_fact",
+    "question": "What is the minimum amount for a part-prepayment?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "25,000"
+      ]
+    ]
+  },
+  {
+    "id": "LF11",
+    "category": "loan_fact",
+    "question": "How many days of notice are needed to foreclose the loan?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "15 days"
+      ]
+    ]
+  },
+  {
+    "id": "LF12",
+    "category": "loan_fact",
+    "question": "How soon is the no-dues certificate issued after foreclosure?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "7 working days",
+        "seven working days",
+        "7 days"
+      ]
+    ]
+  },
+  {
+    "id": "LF13",
+    "category": "loan_fact",
+    "question": "What is the late payment charge?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "LF14",
+    "category": "loan_fact",
+    "question": "What is the bounce charge for a failed auto-debit?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": "LF15",
+    "category": "loan_fact",
+    "question": "After how many days overdue is a delay reported to the credit bureaus?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "LF16",
+    "category": "loan_fact",
+    "question": "When can the lender start legal recovery?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "90 days"
+      ]
+    ]
+  },
+  {
+    "id": "CD01",
+    "category": "cross_document",
+    "question": "What is the waiting period for pre-existing diseases in the health policy, and what is the prepayment charge on the loan?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      },
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "36 months",
+        "three years",
+        "3 years"
+      ],
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "CD02",
+    "category": "cross_document",
+    "question": "Which document allows cancellation within 15 days of receiving it?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "policy"
+      ]
+    ]
+  },
+  {
+    "id": "CD03",
+    "category": "cross_document",
+    "question": "What is the co-payment for senior citizens in the health policy, and what is the loan interest rate?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      },
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10%"
+      ],
+      [
+        "10.5%"
+      ]
+    ]
+  },
+  {
+    "id": "CD04",
+    "category": "cross_document",
+    "question": "How much notice is needed before planned hospital admission under the policy, and before foreclosing the loan?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      },
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "48 hours",
+        "two days",
+        "2 days"
+      ],
+      [
+        "15 days"
+      ]
+    ]
+  },
+  {
+    "id": "NI01",
+    "category": "not_in_documents",
+    "question": "What is the premium for a 35 year old?",
+    "answerable": false
+  },
+  {
+    "id": "NI02",
+    "category": "not_in_documents",
+    "question": "Which hospitals are in the cashless network?",
+    "answerable": false
+  },
+  {
+    "id": "NI03",
+    "category": "not_in_documents",
+    "question": "What credit score is needed to get the loan?",
+    "answerable": false
+  },
+  {
+    "id": "NI04",
+    "category": "not_in_documents",
+    "question": "What is the minimum age to apply for the loan?",
+    "answerable": false
+  },
+  {
+    "id": "NI05",
+    "category": "not_in_documents",
+    "question": "Does the policy cover COVID-19 treatment?",
+    "answerable": false
+  },
+  {
+    "id": "NI06",
+    "category": "not_in_documents",
+    "question": "Who won the cricket world cup?",
+    "answerable": false
+  },
+  {
+    "id": "NI07",
+    "category": "not_in_documents",
+    "question": "Can the loan be transferred to another bank?",
+    "answerable": false
+  },
+  {
+    "id": "NI08",
+    "category": "not_in_documents",
+    "question": "What is the phone number of the customer care team?",
+    "answerable": false
+  },
+  {
+    "id": "NI09",
+    "category": "not_in_documents",
+    "question": "What documents are needed to apply for the loan?",
+    "answerable": false
+  },
+  {
+    "id": "FU01",
+    "category": "follow_up",
+    "question": "And for other members?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the co-payment for policyholders aged 60 and above?"
+      },
+      {
+        "role": "assistant",
+        "content": "They pay 10% of every admissible claim."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      }
+    ],
+    "answer_keys": [
+      [
+        "no co-payment",
+        "no copayment",
+        "not pay",
+        "do not pay",
+        "none"
+      ]
+    ]
+  },
+  {
+    "id": "FU02",
+    "category": "follow_up",
+    "question": "What is the minimum amount for that?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "Can I make a part-prepayment on the loan?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, but only after 6 months from the first instalment."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "25,000"
+      ]
+    ]
+  },
+  {
+    "id": "FU03",
+    "category": "follow_up",
+    "question": "What about for pre-existing diseases?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the initial waiting period in the policy?"
+      },
+      {
+        "role": "assistant",
+        "content": "30 days after the policy start date, except for accidents."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "36 months",
+        "three years",
+        "3 years"
+      ]
+    ]
+  },
+  {
+    "id": "FU04",
+    "category": "follow_up",
+    "question": "What happens if that fails?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "How is the loan EMI collected?"
+      },
+      {
+        "role": "assistant",
+        "content": "By auto-debit from the borrower's bank account."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": "FU05",
+    "category": "follow_up",
+    "question": "And for the ICU?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the room rent limit?"
+      },
+      {
+        "role": "assistant",
+        "content": "1% of the sum insured per day."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "FU06",
+    "category": "follow_up",
+    "question": "And after 90 days?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What happens if an EMI is overdue for more than 30 days?"
+      },
+      {
+        "role": "assistant",
+        "content": "The delay is reported to the credit bureaus."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "non-performing",
+        "non performing",
+        "legal"
+      ]
+    ]
+  },
+  {
+    "id": "SC01",
+    "category": "standalone_after_chat",
+    "question": "How long is the waiting period for hernia treatment?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the prepayment charge?"
+      },
+      {
+        "role": "assistant",
+        "content": "2% of the outstanding principal."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "24 months",
+        "two years",
+        "2 years"
+      ]
+    ]
+  },
+  {
+    "id": "SC02",
+    "category": "standalone_after_chat",
+    "question": "What is the late payment charge on the loan?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the co-payment for seniors?"
+      },
+      {
+        "role": "assistant",
+        "content": "10% of every admissible claim."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  },
+  {
+    "id": "SC03",
+    "category": "standalone_after_chat",
+    "question": "What is the sum insured for a family floater?",
+    "answerable": true,
+    "history": [
+      {
+        "role": "user",
+        "content": "What is the loan tenure?"
+      },
+      {
+        "role": "assistant",
+        "content": "5 years."
+      }
+    ],
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10,00,000"
+      ]
+    ]
+  },
+  {
+    "id": "FI01",
+    "category": "filtered",
+    "question": "What is the prepayment charge?",
+    "answerable": false,
+    "sources": [
+      "sample_policy.pdf"
+    ]
+  },
+  {
+    "id": "FI02",
+    "category": "filtered",
+    "question": "What is the prepayment charge?",
+    "answerable": true,
+    "sources": [
+      "sample_loan.pdf"
+    ],
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ]
+    ]
+  }
+]

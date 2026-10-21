@@ -36,3 +36,8 @@
 ## Day 13 (Docker)
 - Image size: 841 MB. whoami inside the container prints "verity" (not root).
 - .env and the database are kept out of the image with .dockerignore, and the key is supplied at run time.
+
+## Day 15 (benchmark v1)
+- 57 questions on 2 fake documents (10 chunks). Retrieval 47/47, answers 47/47, refusals 10/10, 0 silent errors, 0 errors.
+- A perfect score means the set is too easy, not that Verity is perfect: top-4 covers 40% of a 10-chunk library, questions reuse the documents' words, and scoring is substring matching ("2%" would also accept "12%").
+- Plan: benchmark v2 with more documents and harder questions.
