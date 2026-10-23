@@ -48,3 +48,8 @@
 - AM03: answer covered 2 of 3 documents. Cause (from the retrieved list): ___
 - TU01: answered a neighbouring fact (2 GB of high speed data) to a question about maximum speed. Fix planned: answer only when the excerpts directly answer the question.
 - Run-to-run check (v2b): ___
+
+## Day 17 (web search wrapper)
+- Free search via the ddgs package (a scraper, not an official API), wrapped behind one function so it can be swapped.
+- Queries are capped at 200 characters so document text cannot leak into a search. Results keep only http(s) links and clean, short text. Cached for 10 minutes, one retry for temporary errors.
+- Real search on my machine: ___ (worked / rate limited / error type)
