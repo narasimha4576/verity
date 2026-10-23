@@ -14,6 +14,13 @@ CATEGORIES = [
     "follow_up",
     "standalone_after_chat",
     "filtered",
+    "paraphrase",
+    "confusable",
+    "ambiguous",
+    "computed",
+    "typo",
+    "conditional",
+    "tempting_not_in_docs",
 ]
 PASSING = {"correct", "correct_refusal"}
 
@@ -22,9 +29,21 @@ def normalize(text):
     return re.sub(r"\s+", " ", (text or "").lower()).strip()
 
 
+def contains_key(text, option):
+    """Is this accepted spelling in the (normalized) answer text?
+
+    Keys with digits must not sit inside a longer number, so "2%" does not
+    match "12%" and "500" does not match "2,500" or "5000".
+    """
+    pattern = re.escape(normalize(option))
+    if any(ch.isdigit() for ch in option):
+        pattern = r"(?<!\d)(?<!\d[.,])" + pattern + r"(?!\d)(?!,\d)"
+    return re.search(pattern, text) is not None
+
+
 def keys_match(answer, groups):
     text = normalize(answer)
-    return all(any(normalize(option) in text for option in group) for group in groups)
+    return all(any(contains_key(text, option) for option in group) for group in groups)
 
 
 def pairs(items):

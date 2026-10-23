@@ -41,3 +41,10 @@
 - 57 questions on 2 fake documents (10 chunks). Retrieval 47/47, answers 47/47, refusals 10/10, 0 silent errors, 0 errors.
 - A perfect score means the set is too easy, not that Verity is perfect: top-4 covers 40% of a 10-chunk library, questions reuse the documents' words, and scoring is substring matching ("2%" would also accept "12%").
 - Plan: benchmark v2 with more documents and harder questions.
+
+## Day 16 results (benchmark v2)
+- 103 questions: 101 pass (98.1%). Retrieval 84/85, answers 84/85, refusals 17/18, 2 silent errors, 0 errors.
+- Weak groups: ambiguous (2/3) and tempting_not_in_docs (7/8).
+- AM03: answer covered 2 of 3 documents. Cause (from the retrieved list): ___
+- TU01: answered a neighbouring fact (2 GB of high speed data) to a question about maximum speed. Fix planned: answer only when the excerpts directly answer the question.
+- Run-to-run check (v2b): ___

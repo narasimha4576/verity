@@ -529,7 +529,7 @@
   {
     "id": "LF13",
     "category": "loan_fact",
-    "question": "What is the late payment charge?",
+    "question": "What is the late payment charge on the loan?",
     "answerable": true,
     "expected": [
       {
@@ -1021,6 +1021,825 @@
       [
         "2%"
       ]
+    ]
+  },
+  {
+    "id": "PA01",
+    "category": "paraphrase",
+    "question": "How much money must I hand to the landlord before moving in?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "two months",
+        "50,000"
+      ]
+    ]
+  },
+  {
+    "id": "PA02",
+    "category": "paraphrase",
+    "question": "In my trial period at work, how much warning does either side owe the other?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_job_offer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "15 days"
+      ]
+    ]
+  },
+  {
+    "id": "PA03",
+    "category": "paraphrase",
+    "question": "How long will a fix take if my laptop breaks during the cover period?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_warranty.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10 working days",
+        "ten working days"
+      ]
+    ]
+  },
+  {
+    "id": "PA04",
+    "category": "paraphrase",
+    "question": "What happens to my phone number if I never top up?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_mobile_plan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "90 days"
+      ],
+      [
+        "deactivat"
+      ]
+    ]
+  },
+  {
+    "id": "PA05",
+    "category": "paraphrase",
+    "question": "How often does the bank add interest to my balance?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_savings.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "quarter",
+        "three months",
+        "3 months"
+      ]
+    ]
+  },
+  {
+    "id": "PA06",
+    "category": "paraphrase",
+    "question": "How many days after my statement do I have before the card bill must be paid?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "20 days"
+      ]
+    ]
+  },
+  {
+    "id": "PA07",
+    "category": "paraphrase",
+    "question": "What does it cost to take cash out using my credit card?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "2.5%"
+      ]
+    ]
+  },
+  {
+    "id": "PA08",
+    "category": "paraphrase",
+    "question": "How much must I give back if I quit my job in the ninth month?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_job_offer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "20,000"
+      ]
+    ]
+  },
+  {
+    "id": "CF01",
+    "category": "confusable",
+    "question": "What is the late fee on my credit card?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "750"
+      ]
+    ]
+  },
+  {
+    "id": "CF02",
+    "category": "confusable",
+    "question": "What is the late fee on my rent?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "1.5%"
+      ]
+    ]
+  },
+  {
+    "id": "CF03",
+    "category": "confusable",
+    "question": "What is the interest rate on my savings account?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_savings.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "3.0%",
+        "3%"
+      ]
+    ]
+  },
+  {
+    "id": "CF04",
+    "category": "confusable",
+    "question": "What is the interest rate on the credit card?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "3.49%"
+      ]
+    ]
+  },
+  {
+    "id": "CF05",
+    "category": "confusable",
+    "question": "How much notice must I give to leave my rented flat?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "2 months",
+        "two months"
+      ]
+    ]
+  },
+  {
+    "id": "CF06",
+    "category": "confusable",
+    "question": "How much notice must I give when resigning after my job is confirmed?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_job_offer.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "60 days"
+      ]
+    ]
+  },
+  {
+    "id": "CF07",
+    "category": "confusable",
+    "question": "How many days do I have to dispute a transaction on my credit card?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "60 days"
+      ]
+    ]
+  },
+  {
+    "id": "CF08",
+    "category": "confusable",
+    "question": "How many days do I have to dispute my mobile bill?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_mobile_plan.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "CF09",
+    "category": "confusable",
+    "question": "How many days does the landlord have to return my security deposit?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "CF10",
+    "category": "confusable",
+    "question": "What does it cost to close my savings account after the first two weeks?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_savings.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": "AM01",
+    "category": "ambiguous",
+    "question": "What is the late fee?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 3
+      },
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      },
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "2%"
+      ],
+      [
+        "750"
+      ],
+      [
+        "1.5%"
+      ]
+    ]
+  },
+  {
+    "id": "AM02",
+    "category": "ambiguous",
+    "question": "What is the interest rate?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      },
+      {
+        "source": "sample_savings.pdf",
+        "page": 1
+      },
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10.5%"
+      ],
+      [
+        "3.0%",
+        "3%"
+      ],
+      [
+        "3.49%"
+      ]
+    ]
+  },
+  {
+    "id": "AM03",
+    "category": "ambiguous",
+    "question": "How many days do I have to cancel or return something?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 4
+      },
+      {
+        "source": "sample_warranty.pdf",
+        "page": 2
+      },
+      {
+        "source": "sample_savings.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "15 days"
+      ],
+      [
+        "7 days"
+      ],
+      [
+        "14 days"
+      ]
+    ]
+  },
+  {
+    "id": "CO01",
+    "category": "computed",
+    "question": "How many rupees is the loan processing fee?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "10,000"
+      ]
+    ],
+    "evidence": [
+      "1%",
+      "10,00,000"
+    ]
+  },
+  {
+    "id": "CO02",
+    "category": "computed",
+    "question": "How many days of leave do I get in a year, casual and earned together?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_job_offer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days",
+        "thirty days"
+      ]
+    ],
+    "evidence": [
+      "12 days",
+      "18 days"
+    ]
+  },
+  {
+    "id": "CO03",
+    "category": "computed",
+    "question": "How many months of warranty will I have in total if I buy the extended warranty?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_warranty.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "24 months",
+        "two years",
+        "2 years"
+      ]
+    ],
+    "evidence": [
+      "12 months",
+      "12 more months"
+    ]
+  },
+  {
+    "id": "CO04",
+    "category": "computed",
+    "question": "If I take a Rs 10,000 cash advance on my credit card, how much fee do I pay?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "500"
+      ]
+    ],
+    "evidence": [
+      "2.5%",
+      "minimum of rs 500"
+    ]
+  },
+  {
+    "id": "CO05",
+    "category": "computed",
+    "question": "How much is the late fee in rupees on my monthly rent if I pay one month late?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "375"
+      ]
+    ],
+    "evidence": [
+      "1.5%",
+      "25,000"
+    ]
+  },
+  {
+    "id": "CO06",
+    "category": "computed",
+    "question": "How much do I pay in total each month for rent and maintenance?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "27,000"
+      ]
+    ],
+    "evidence": [
+      "25,000",
+      "2,000"
+    ]
+  },
+  {
+    "id": "TY01",
+    "category": "typo",
+    "question": "pre existing waitng period",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_policy.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "36 months",
+        "three years",
+        "3 years"
+      ]
+    ]
+  },
+  {
+    "id": "TY02",
+    "category": "typo",
+    "question": "credit card anual fee",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "999"
+      ]
+    ]
+  },
+  {
+    "id": "TY03",
+    "category": "typo",
+    "question": "emi due date",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_loan.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "5th",
+        "fifth"
+      ]
+    ]
+  },
+  {
+    "id": "TY04",
+    "category": "typo",
+    "question": "flat deposit refnd time",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "TY05",
+    "category": "typo",
+    "question": "laptop battry warranty",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_warranty.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "6 months",
+        "six months"
+      ]
+    ]
+  },
+  {
+    "id": "CN01",
+    "category": "conditional",
+    "question": "Can I keep a pet in my rented flat?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "written permission",
+        "permission"
+      ]
+    ]
+  },
+  {
+    "id": "CN02",
+    "category": "conditional",
+    "question": "Can I sublet my flat if the landlord agrees?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_rental.pdf",
+        "page": 2
+      }
+    ],
+    "answer_keys": [
+      [
+        "not allowed",
+        "cannot",
+        "not permitted",
+        "prohibited"
+      ]
+    ]
+  },
+  {
+    "id": "CN03",
+    "category": "conditional",
+    "question": "Can I still buy the extended warranty two months after buying the laptop?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_warranty.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "30 days"
+      ]
+    ]
+  },
+  {
+    "id": "CN04",
+    "category": "conditional",
+    "question": "Will my credit card annual fee be waived if I spend Rs 1,00,000 in a year?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_credit_card.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "1,50,000"
+      ]
+    ]
+  },
+  {
+    "id": "CN05",
+    "category": "conditional",
+    "question": "Is there a penalty if my savings balance falls below the minimum?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_savings.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "150"
+      ]
+    ]
+  },
+  {
+    "id": "CN06",
+    "category": "conditional",
+    "question": "Can I carry forward my casual leave?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "sample_job_offer.pdf",
+        "page": 1
+      }
+    ],
+    "answer_keys": [
+      [
+        "cannot",
+        "can not",
+        "not be carried",
+        "not carried",
+        "not allowed"
+      ]
+    ]
+  },
+  {
+    "id": "TU01",
+    "category": "tempting_not_in_docs",
+    "question": "What is the maximum data speed on the mobile plan?",
+    "answerable": false,
+    "absent": [
+      "mbps",
+      "5g",
+      "4g"
+    ]
+  },
+  {
+    "id": "TU02",
+    "category": "tempting_not_in_docs",
+    "question": "Does the laptop warranty cover the charger?",
+    "answerable": false,
+    "absent": [
+      "charger",
+      "adapter"
+    ]
+  },
+  {
+    "id": "TU03",
+    "category": "tempting_not_in_docs",
+    "question": "How many sick leave days do I get?",
+    "answerable": false,
+    "absent": [
+      "sick leave",
+      "sick"
+    ]
+  },
+  {
+    "id": "TU04",
+    "category": "tempting_not_in_docs",
+    "question": "How much interest does the landlord pay on my security deposit?",
+    "answerable": false,
+    "absent": [
+      "interest on the security",
+      "interest on the deposit",
+      "deposit earns"
+    ]
+  },
+  {
+    "id": "TU05",
+    "category": "tempting_not_in_docs",
+    "question": "What is the cashback rate on online shopping with the credit card?",
+    "answerable": false,
+    "absent": [
+      "cashback",
+      "cash back"
+    ]
+  },
+  {
+    "id": "TU06",
+    "category": "tempting_not_in_docs",
+    "question": "How much does it cost to cancel the mobile plan early?",
+    "answerable": false,
+    "absent": [
+      "early cancellation"
+    ]
+  },
+  {
+    "id": "TU07",
+    "category": "tempting_not_in_docs",
+    "question": "What is the cash withdrawal limit on the credit card?",
+    "answerable": false,
+    "absent": [
+      "cash limit",
+      "credit card withdrawal"
+    ]
+  },
+  {
+    "id": "TU08",
+    "category": "tempting_not_in_docs",
+    "question": "What is the minimum age to open the savings account?",
+    "answerable": false,
+    "absent": [
+      "minimum age",
+      "age of 18",
+      "18 years"
     ]
   }
 ]

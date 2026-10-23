@@ -9,6 +9,7 @@ from benchmark.scoring import (
     CATEGORIES,
     format_report,
     keys_match,
+    normalize,
     score_question,
     summarize,
 )
@@ -16,16 +17,18 @@ from benchmark.scoring import (
 BENCH = Path(__file__).resolve().parent.parent / "benchmark"
 QUESTIONS = json.loads((BENCH / "questions.json").read_text(encoding="utf-8"))
 PDF_PAGES = {
-    pdf.name: {p["page"]: " ".join(p["text"].lower().split()) for p in load_pdf(pdf)}
+    pdf.name: {p["page"]: normalize(p["text"]) for p in load_pdf(pdf)}
     for pdf in (BENCH / "docs").glob("*.pdf")
 }
+ALL_TEXT = " ".join(text for pages in PDF_PAGES.values() for text in pages.values())
 
 
 # ---------- the ground truth is checked against the real documents ----------
 
 def test_benchmark_is_big_enough_and_balanced():
-    assert len(QUESTIONS) >= 40
-    assert sum(1 for q in QUESTIONS if not q["answerable"]) >= 8
+    assert len(QUESTIONS) >= 100
+    assert sum(1 for q in QUESTIONS if not q["answerable"]) >= 15
+    assert len(PDF_PAGES) >= 8
     assert {q["category"] for q in QUESTIONS} == set(CATEGORIES)
 
 
@@ -43,7 +46,7 @@ def test_question_ids_are_unique_and_well_formed():
             assert "expected" not in q
 
 
-def test_every_expected_page_exists_and_contains_the_answer():
+def test_every_expected_page_exists_and_contains_the_evidence():
     for q in QUESTIONS:
         if not q["answerable"]:
             continue
@@ -53,9 +56,25 @@ def test_every_expected_page_exists_and_contains_the_answer():
             assert item["page"] in pages, f"{q['id']}: no page {item['page']}"
             texts.append(pages[item["page"]])
         combined = " ".join(texts)
-        for group in q["answer_keys"]:
-            # the first spelling in each group is the one printed in the document
-            assert group[0].lower() in combined, f"{q['id']}: '{group[0]}' not on the labelled page"
+        # Computed answers are not printed, so their inputs are checked instead.
+        # Otherwise the first spelling in each group is the one printed in the document.
+        needed = q.get("evidence") or [group[0] for group in q["answer_keys"]]
+        for term in needed:
+            assert normalize(term) in combined, f"{q['id']}: '{term}' not on the labelled page"
+
+
+def test_unanswerable_questions_are_really_absent_from_every_document():
+    for q in QUESTIONS:
+        if q["category"] == "tempting_not_in_docs":
+            assert q["absent"], f"{q['id']} needs absent terms"
+        for term in q.get("absent", []):
+            assert term.lower() not in ALL_TEXT, f"{q['id']}: '{term}' appears in a document"
+
+
+def test_no_document_contains_a_phone_number_or_a_credit_score_section():
+    # These would quietly turn some "not in the documents" questions into answerable ones.
+    assert "credit score" not in ALL_TEXT
+    assert "minimum age" not in ALL_TEXT
 
 
 def test_source_filters_name_real_documents():
@@ -86,6 +105,30 @@ def test_keys_match_needs_one_spelling_from_every_group():
     groups = [["36 months", "three years"], ["50,000"]]
     assert keys_match("After THREE   years, up to Rs 50,000.", groups)
     assert not keys_match("After three years.", groups)
+
+
+@pytest.mark.parametrize(
+    ("answer", "key", "expected"),
+    [
+        ("The charge is 2% per month.", "2%", True),
+        ("The charge is 12%.", "2%", False),
+        ("The charge is 22%.", "2%", False),
+        ("The fee is Rs 500.", "500", True),
+        ("The fee is Rs 2,500.", "500", False),
+        ("The fee is Rs 5000.", "500", False),
+        ("The fee is Rs 500.00.", "500", True),
+        ("A fee of Rs 500,000 applies.", "500", False),
+        ("It takes 130 days.", "30 days", False),
+        ("It takes 30 days.", "30 days", True),
+        ("The rate is 13.0% a year.", "3.0%", False),
+        ("The rate is 3.0% a year.", "3.0%", True),
+        ("The loan is Rs 10,00,000.", "10,000", False),
+        ("The fee is Rs 10,000.", "10,000", True),
+        ("It was declined in writing.", "decline", True),
+    ],
+)
+def test_numbers_are_not_matched_inside_longer_numbers(answer, key, expected):
+    assert keys_match(answer, [[key]]) is expected
 
 
 def test_correct_answer():
