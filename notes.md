@@ -53,3 +53,9 @@
 - Free search via the ddgs package (a scraper, not an official API), wrapped behind one function so it can be swapped.
 - Queries are capped at 200 characters so document text cannot leak into a search. Results keep only http(s) links and clean, short text. Cached for 10 minutes, one retry for temporary errors.
 - Real search on my machine: ___ (worked / rate limited / error type)
+
+## Day 18 (router and TU01 fix)
+- Router rules: documents first; web only for real gaps (not_found, low_similarity, no_documents); never after a rejected answer; never when documents are chosen; off by default.
+- Prompt fix: a related fact is not an answer (arithmetic still allowed). The example in the prompt is not from the benchmark, and a test checks that.
+- Before (v2): 101/103, TU01 failed. Run-to-run check (v2b): ___
+- After (day18): ___/103. Fixed: ___ Broke: ___ Still failing: ___

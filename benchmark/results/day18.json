@@ -1,0 +1,1462 @@
+{
+  "meta": {
+    "date": "2026-10-24",
+    "model": "gemini-3.1-flash-lite",
+    "embed_model": "gemini-embedding-001",
+    "k": 4,
+    "min_score": 0.55
+  },
+  "records": {
+    "PF01": {
+      "id": "PF01",
+      "status": "answered",
+      "answer": "The annual sum insured for an individual is Rs 5,00,000 per policy year.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the annual sum insured for an individual?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.689
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.682
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.644
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.64
+        }
+      ],
+      "error": null,
+      "seconds": 25.34
+    },
+    "PF02": {
+      "id": "PF02",
+      "status": "answered",
+      "answer": "The annual sum insured for a family floater of up to four members is Rs 10,00,000.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How much is the sum insured for a family floater?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.7
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.692
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.662
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.649
+        }
+      ],
+      "error": null,
+      "seconds": 28.76
+    },
+    "PF03": {
+      "id": "PF03",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 8.6
+    },
+    "PF04": {
+      "id": "PF04",
+      "status": "answered",
+      "answer": "Post-hospitalisation expenses are covered for 60 days after discharge.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How long after discharge are post-hospitalisation expenses covered?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.71
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.679
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.673
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.666
+        }
+      ],
+      "error": null,
+      "seconds": 16.38
+    },
+    "PF05": {
+      "id": "PF05",
+      "status": "answered",
+      "answer": "The room rent limit is 1% of the sum insured per day.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the room rent limit per day?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.667
+        },
+        {
+          "source": "sample_rental.pdf",
+          "page": 1,
+          "score": 0.648
+        },
+        {
+          "source": "sample_rental.pdf",
+          "page": 2,
+          "score": 0.632
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 1,
+          "score": 0.622
+        }
+      ],
+      "error": null,
+      "seconds": 72.66
+    },
+    "PF06": {
+      "id": "PF06",
+      "status": "answered",
+      "answer": "Intensive care unit charges are limited to 2% of the sum insured per day.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the limit on intensive care unit charges per day?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.742
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.612
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.597
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 2,
+          "score": 0.595
+        }
+      ],
+      "error": null,
+      "seconds": 75.88
+    },
+    "PF07": {
+      "id": "PF07",
+      "status": "answered",
+      "answer": "Ambulance charges are reimbursed up to Rs 2,000 per hospitalisation when the ambulance is used to reach the hospital.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How much does the policy reimburse for ambulance charges?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.76
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.655
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.65
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.645
+        }
+      ],
+      "error": null,
+      "seconds": 76.76
+    },
+    "PF08": {
+      "id": "PF08",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 12.49
+    },
+    "PF09": {
+      "id": "PF09",
+      "status": "answered",
+      "answer": "Pre-existing diseases are covered only after 36 months of continuous coverage.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "How long is the waiting period for pre-existing diseases?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.79
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.693
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.679
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.675
+        }
+      ],
+      "error": null,
+      "seconds": 86.28
+    },
+    "PF10": {
+      "id": "PF10",
+      "status": "answered",
+      "answer": "The illnesses with a 24-month waiting period are hernia, cataract, joint replacement, and kidney stones.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "Which illnesses have a 24 month waiting period?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.73
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.651
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.65
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.647
+        }
+      ],
+      "error": null,
+      "seconds": 11.27
+    },
+    "PF11": {
+      "id": "PF11",
+      "status": "answered",
+      "answer": "The maternity cover is up to Rs 50,000 and it starts after 24 months of continuous coverage.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "How much is the maternity cover and when does it start?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.664
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.62
+        },
+        {
+          "source": "sample_job_offer.pdf",
+          "page": 1,
+          "score": 0.618
+        },
+        {
+          "source": "sample_job_offer.pdf",
+          "page": 2,
+          "score": 0.617
+        }
+      ],
+      "error": null,
+      "seconds": 14.63
+    },
+    "PF12": {
+      "id": "PF12",
+      "status": "answered",
+      "answer": "Dental treatment is excluded unless it requires hospitalisation because of an accident.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 3
+        }
+      ],
+      "question_used": "Is dental treatment covered?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.718
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.649
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.637
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.625
+        }
+      ],
+      "error": null,
+      "seconds": 4.98
+    },
+    "PF13": {
+      "id": "PF13",
+      "status": "answered",
+      "answer": "For a cashless claim, you must notify the insurer at least 48 hours before admission for planned treatment.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "How many hours before planned treatment must the insurer be told for a cashless claim?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.715
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.67
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.665
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.663
+        }
+      ],
+      "error": null,
+      "seconds": 7.08
+    },
+    "PF14": {
+      "id": "PF14",
+      "status": "answered",
+      "answer": "Policyholders aged 60 years and above are required to pay 10% of every admissible claim.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "What co-payment applies to policyholders aged 60 and above?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.713
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.682
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.66
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.646
+        }
+      ],
+      "error": null,
+      "seconds": 33.03
+    },
+    "PF15": {
+      "id": "PF15",
+      "status": "answered",
+      "answer": "Reimbursement claims must be submitted within 15 days of discharge.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "Within how many days of discharge must a reimbursement claim be submitted?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.701
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.681
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.656
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.653
+        }
+      ],
+      "error": null,
+      "seconds": 36.65
+    },
+    "PF16": {
+      "id": "PF16",
+      "status": "answered",
+      "answer": "The insurer will settle or reject a complete claim within 30 days of receiving the last required document.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "How many days does the insurer have to settle or reject a complete claim?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.701
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.688
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.654
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.63
+        }
+      ],
+      "error": null,
+      "seconds": 6.58
+    },
+    "PF17": {
+      "id": "PF17",
+      "status": "answered",
+      "answer": "The policyholder may cancel the policy within 15 days of receiving it to receive a refund of the premium.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "Within how many days of receiving the policy can it be cancelled for a refund?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.797
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.695
+        },
+        {
+          "source": "sample_warranty.pdf",
+          "page": 2,
+          "score": 0.652
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.618
+        }
+      ],
+      "error": null,
+      "seconds": 6.63
+    },
+    "LF01": {
+      "id": "LF01",
+      "status": "answered",
+      "answer": "The loan amount is Rs 10,00,000.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the loan amount?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.689
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.671
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.649
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.648
+        }
+      ],
+      "error": null,
+      "seconds": 5.65
+    },
+    "LF02": {
+      "id": "LF02",
+      "status": "answered",
+      "answer": "The interest rate for the Horizon Personal Loan is 10.5% per year.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the interest rate on the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.698
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 1,
+          "score": 0.667
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.661
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.661
+        }
+      ],
+      "error": null,
+      "seconds": 8.87
+    },
+    "LF03": {
+      "id": "LF03",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 5.73
+    },
+    "LF04": {
+      "id": "LF04",
+      "status": "answered",
+      "answer": "The processing fee for the Horizon Personal Loan is 1% of the loan amount, plus taxes.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the processing fee?",
+      "retrieved": [
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.645
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.628
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 2,
+          "score": 0.626
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 2,
+          "score": 0.619
+        }
+      ],
+      "error": null,
+      "seconds": 8.8
+    },
+    "LF05": {
+      "id": "LF05",
+      "status": "answered",
+      "answer": "The monthly instalment (EMI) is due on the 5th day of every month.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "On which day of the month is the EMI due?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.723
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.68
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.663
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.654
+        }
+      ],
+      "error": null,
+      "seconds": 31.85
+    },
+    "LF06": {
+      "id": "LF06",
+      "status": "answered",
+      "answer": "The EMI is collected by auto-debit from the borrower's bank account.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How is the EMI collected?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.71
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.662
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.658
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.654
+        }
+      ],
+      "error": null,
+      "seconds": 10.13
+    },
+    "LF07": {
+      "id": "LF07",
+      "status": "answered",
+      "answer": "No, the loan insurance cover is optional.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "Is the loan insurance cover compulsory?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.775
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.657
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.646
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.64
+        }
+      ],
+      "error": null,
+      "seconds": 8.89
+    },
+    "LF08": {
+      "id": "LF08",
+      "status": "answered",
+      "answer": "The borrower may make a part-prepayment only after 6 months from the date of the first instalment.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "After how many months can the borrower make a part-prepayment?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.775
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.705
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.675
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.647
+        }
+      ],
+      "error": null,
+      "seconds": 23.45
+    },
+    "LF09": {
+      "id": "LF09",
+      "status": "answered",
+      "answer": "The prepayment charge is 2% of the outstanding principal.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "What is the prepayment charge?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.732
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.648
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 2,
+          "score": 0.647
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.635
+        }
+      ],
+      "error": null,
+      "seconds": 7.86
+    },
+    "LF10": {
+      "id": "LF10",
+      "status": "answered",
+      "answer": "The minimum amount for a part-prepayment is Rs 25,000.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "What is the minimum amount for a part-prepayment?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.753
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.693
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.643
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.64
+        }
+      ],
+      "error": null,
+      "seconds": 7.67
+    },
+    "LF11": {
+      "id": "LF11",
+      "status": "answered",
+      "answer": "To close the loan early, the borrower must provide a foreclosure notice of 15 days.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "How many days of notice are needed to foreclose the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.696
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.693
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.662
+        },
+        {
+          "source": "sample_job_offer.pdf",
+          "page": 2,
+          "score": 0.625
+        }
+      ],
+      "error": null,
+      "seconds": 19.85
+    },
+    "LF12": {
+      "id": "LF12",
+      "status": "answered",
+      "answer": "The lender will issue a no-dues certificate within 7 working days after foreclosure.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "How soon is the no-dues certificate issued after foreclosure?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.672
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.645
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.608
+        },
+        {
+          "source": "sample_job_offer.pdf",
+          "page": 2,
+          "score": 0.596
+        }
+      ],
+      "error": null,
+      "seconds": 6.75
+    },
+    "LF13": {
+      "id": "LF13",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 7.55
+    },
+    "LF14": {
+      "id": "LF14",
+      "status": "answered",
+      "answer": "The bounce charge for a failed auto-debit is Rs 500.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3
+        }
+      ],
+      "question_used": "What is the bounce charge for a failed auto-debit?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.665
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 2,
+          "score": 0.635
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 1,
+          "score": 0.596
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.581
+        }
+      ],
+      "error": null,
+      "seconds": 7.18
+    },
+    "LF15": {
+      "id": "LF15",
+      "status": "answered",
+      "answer": "A delay is reported to the credit bureaus if an EMI is overdue for more than 30 days.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3
+        }
+      ],
+      "question_used": "After how many days overdue is a delay reported to the credit bureaus?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.708
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.618
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 2,
+          "score": 0.593
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.587
+        }
+      ],
+      "error": null,
+      "seconds": 6.41
+    },
+    "LF16": {
+      "id": "LF16",
+      "status": "answered",
+      "answer": "The lender may begin legal recovery if an EMI is overdue for more than 90 days, at which point the account is classified as non-performing.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3
+        }
+      ],
+      "question_used": "When can the lender start legal recovery?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.718
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.666
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.644
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.623
+        }
+      ],
+      "error": null,
+      "seconds": 9.52
+    },
+    "CD01": {
+      "id": "CD01",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 12.72
+    },
+    "CD02": {
+      "id": "CD02",
+      "status": "answered",
+      "answer": "The sample_policy.pdf document allows the policyholder to cancel within 15 days of receiving the policy.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "Which document allows cancellation within 15 days of receiving it?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.739
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.666
+        },
+        {
+          "source": "sample_warranty.pdf",
+          "page": 1,
+          "score": 0.645
+        },
+        {
+          "source": "sample_job_offer.pdf",
+          "page": 1,
+          "score": 0.645
+        }
+      ],
+      "error": null,
+      "seconds": 7.32
+    },
+    "CD03": {
+      "id": "CD03",
+      "status": "answered",
+      "answer": "Policyholders aged 60 years and above pay a 10% co-payment on every admissible claim. The interest rate for the Horizon Personal Loan is 10.5% per year.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "What is the co-payment for senior citizens in the health policy, and what is the loan interest rate?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.674
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.659
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.656
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.651
+        }
+      ],
+      "error": null,
+      "seconds": 8.79
+    },
+    "CD04": {
+      "id": "CD04",
+      "status": "answered",
+      "answer": "For planned hospital admission, the insurer must be notified at least 48 hours before admission. For loan foreclosure, a notice of 15 days is required.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        }
+      ],
+      "question_used": "How much notice is needed before planned hospital admission under the policy, and before foreclosing the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.705
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.685
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.676
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.663
+        }
+      ],
+      "error": null,
+      "seconds": 5.72
+    },
+    "NI01": {
+      "id": "NI01",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 4.44
+    },
+    "NI02": {
+      "id": "NI02",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 6.05
+    },
+    "NI03": {
+      "id": "NI03",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "What credit score is needed to get the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.647
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.637
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.628
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.625
+        }
+      ],
+      "error": null,
+      "seconds": 5.33
+    },
+    "NI04": {
+      "id": "NI04",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "What is the minimum age to apply for the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.652
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.637
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.631
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.626
+        }
+      ],
+      "error": null,
+      "seconds": 6.23
+    },
+    "NI05": {
+      "id": "NI05",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "Does the policy cover COVID-19 treatment?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 3,
+          "score": 0.684
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.655
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.652
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.648
+        }
+      ],
+      "error": null,
+      "seconds": 17.9
+    },
+    "NI06": {
+      "id": "NI06",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 4.57
+    },
+    "NI07": {
+      "id": "NI07",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "Can the loan be transferred to another bank?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.666
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.638
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.635
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.617
+        }
+      ],
+      "error": null,
+      "seconds": 6.36
+    },
+    "NI08": {
+      "id": "NI08",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 4.41
+    },
+    "NI09": {
+      "id": "NI09",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "What documents are needed to apply for the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.69
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.662
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.639
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.627
+        }
+      ],
+      "error": null,
+      "seconds": 6.63
+    },
+    "FU01": {
+      "id": "FU01",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 4.56
+    },
+    "FU02": {
+      "id": "FU02",
+      "status": "answered",
+      "answer": "The minimum amount for a part-prepayment is Rs 25,000.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "What is the minimum amount for a part-prepayment on the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.749
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.704
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.638
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.635
+        }
+      ],
+      "error": null,
+      "seconds": 11.48
+    }
+  }
+}

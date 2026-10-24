@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2026-10-23",
+    "date": "2026-10-24",
     "model": "gemini-3.1-flash-lite",
     "embed_model": "gemini-embedding-001",
     "k": 4,
@@ -41,43 +41,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.45
-    },
-    "PF02": {
-      "id": "PF02",
-      "status": "answered",
-      "answer": "The annual sum insured for a family floater of up to four members is Rs 10,00,000 per policy year.",
-      "sources": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "How much is the sum insured for a family floater?",
-      "retrieved": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 1,
-          "score": 0.7
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 1,
-          "score": 0.692
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 2,
-          "score": 0.662
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.649
-        }
-      ],
-      "error": null,
-      "seconds": 4.93
+      "seconds": 8.76
     },
     "PF03": {
       "id": "PF03",
@@ -113,7 +77,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.71
+      "seconds": 11.21
     },
     "PF04": {
       "id": "PF04",
@@ -149,7 +113,7 @@
         }
       ],
       "error": null,
-      "seconds": 9.36
+      "seconds": 10.43
     },
     "PF05": {
       "id": "PF05",
@@ -185,7 +149,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.73
+      "seconds": 6.0
     },
     "PF06": {
       "id": "PF06",
@@ -221,7 +185,7 @@
         }
       ],
       "error": null,
-      "seconds": 13.32
+      "seconds": 12.41
     },
     "PF07": {
       "id": "PF07",
@@ -257,7 +221,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.17
+      "seconds": 11.28
     },
     "PF08": {
       "id": "PF08",
@@ -293,7 +257,7 @@
         }
       ],
       "error": null,
-      "seconds": 13.08
+      "seconds": 8.83
     },
     "PF09": {
       "id": "PF09",
@@ -329,7 +293,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.87
+      "seconds": 9.48
     },
     "PF10": {
       "id": "PF10",
@@ -365,7 +329,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.49
+      "seconds": 6.08
     },
     "PF11": {
       "id": "PF11",
@@ -401,7 +365,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.96
+      "seconds": 4.97
     },
     "PF12": {
       "id": "PF12",
@@ -437,12 +401,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.6
+      "seconds": 4.84
     },
     "PF13": {
       "id": "PF13",
       "status": "answered",
-      "answer": "For a cashless claim, you must notify the insurer of planned treatment at least 48 hours before admission.",
+      "answer": "For a cashless claim, planned treatment must be notified to the insurer at least 48 hours before admission.",
       "sources": [
         {
           "source": "sample_policy.pdf",
@@ -473,7 +437,7 @@
         }
       ],
       "error": null,
-      "seconds": 10.67
+      "seconds": 6.09
     },
     "PF14": {
       "id": "PF14",
@@ -509,7 +473,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.94
+      "seconds": 22.24
     },
     "PF15": {
       "id": "PF15",
@@ -545,7 +509,7 @@
         }
       ],
       "error": null,
-      "seconds": 9.05
+      "seconds": 10.69
     },
     "PF16": {
       "id": "PF16",
@@ -581,7 +545,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.8
+      "seconds": 10.1
     },
     "PF17": {
       "id": "PF17",
@@ -617,7 +581,7 @@
         }
       ],
       "error": null,
-      "seconds": 17.16
+      "seconds": 11.82
     },
     "LF01": {
       "id": "LF01",
@@ -653,12 +617,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.67
+      "seconds": 5.03
     },
     "LF02": {
       "id": "LF02",
       "status": "answered",
-      "answer": "The interest rate for the Horizon Personal Loan is 10.5% per year, fixed for the 5-year tenure.",
+      "answer": "The interest rate for the Horizon Personal Loan is 10.5% per year, fixed for a tenure of 5 years.",
       "sources": [
         {
           "source": "sample_loan.pdf",
@@ -689,7 +653,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.99
+      "seconds": 8.24
     },
     "LF03": {
       "id": "LF03",
@@ -725,7 +689,7 @@
         }
       ],
       "error": null,
-      "seconds": 10.83
+      "seconds": 6.36
     },
     "LF04": {
       "id": "LF04",
@@ -761,7 +725,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.76
+      "seconds": 6.85
     },
     "LF05": {
       "id": "LF05",
@@ -797,79 +761,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.98
-    },
-    "LF06": {
-      "id": "LF06",
-      "status": "answered",
-      "answer": "The EMI is collected by auto-debit from the borrower's bank account.",
-      "sources": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "How is the EMI collected?",
-      "retrieved": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.71
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.662
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 2,
-          "score": 0.658
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.654
-        }
-      ],
-      "error": null,
-      "seconds": 7.15
-    },
-    "LF07": {
-      "id": "LF07",
-      "status": "answered",
-      "answer": "No, the loan insurance cover is optional.",
-      "sources": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "Is the loan insurance cover compulsory?",
-      "retrieved": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.775
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.657
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.646
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 2,
-          "score": 0.64
-        }
-      ],
-      "error": null,
-      "seconds": 12.41
+      "seconds": 6.2
     },
     "LF08": {
       "id": "LF08",
@@ -905,7 +797,7 @@
         }
       ],
       "error": null,
-      "seconds": 15.94
+      "seconds": 7.43
     },
     "LF09": {
       "id": "LF09",
@@ -941,48 +833,12 @@
         }
       ],
       "error": null,
-      "seconds": 56.32
-    },
-    "LF10": {
-      "id": "LF10",
-      "status": "answered",
-      "answer": "The minimum amount for a part-prepayment is Rs 25,000.",
-      "sources": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 2
-        }
-      ],
-      "question_used": "What is the minimum amount for a part-prepayment?",
-      "retrieved": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 2,
-          "score": 0.753
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.693
-        },
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 1,
-          "score": 0.643
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.64
-        }
-      ],
-      "error": null,
       "seconds": 5.96
     },
     "LF11": {
       "id": "LF11",
       "status": "answered",
-      "answer": "To close the loan early, the borrower must provide a foreclosure notice of 15 days in writing or through the app.",
+      "answer": "To close the loan early, the borrower must provide a foreclosure notice of 15 days.",
       "sources": [
         {
           "source": "sample_loan.pdf",
@@ -1013,7 +869,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.09
+      "seconds": 13.88
     },
     "LF12": {
       "id": "LF12",
@@ -1049,7 +905,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.8
+      "seconds": 6.41
     },
     "LF13": {
       "id": "LF13",
@@ -1085,7 +941,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.73
+      "seconds": 12.93
     },
     "LF14": {
       "id": "LF14",
@@ -1121,7 +977,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.4
+      "seconds": 4.69
     },
     "LF15": {
       "id": "LF15",
@@ -1157,7 +1013,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.65
+      "seconds": 18.44
     },
     "LF16": {
       "id": "LF16",
@@ -1193,7 +1049,7 @@
         }
       ],
       "error": null,
-      "seconds": 16.64
+      "seconds": 4.74
     },
     "CD01": {
       "id": "CD01",
@@ -1233,7 +1089,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.96
+      "seconds": 4.94
     },
     "CD02": {
       "id": "CD02",
@@ -1269,7 +1125,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.45
+      "seconds": 4.85
     },
     "CD03": {
       "id": "CD03",
@@ -1309,12 +1165,12 @@
         }
       ],
       "error": null,
-      "seconds": 9.9
+      "seconds": 7.44
     },
     "CD04": {
       "id": "CD04",
       "status": "answered",
-      "answer": "For planned hospital admission, the insurer must be notified at least 48 hours before admission. For loan foreclosure, the borrower must provide a notice of 15 days.",
+      "answer": "For planned hospital admission, the insurer must be notified at least 48 hours before admission. For loan foreclosure, a notice of 15 days must be provided in writing or through the app.",
       "sources": [
         {
           "source": "sample_loan.pdf",
@@ -1349,7 +1205,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.02
+      "seconds": 5.19
     },
     "NI01": {
       "id": "NI01",
@@ -1380,7 +1236,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.75
+      "seconds": 7.24
     },
     "NI02": {
       "id": "NI02",
@@ -1411,7 +1267,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.21
+      "seconds": 10.86
     },
     "NI03": {
       "id": "NI03",
@@ -1442,7 +1298,7 @@
         }
       ],
       "error": null,
-      "seconds": 12.82
+      "seconds": 8.83
     },
     "NI04": {
       "id": "NI04",
@@ -1473,7 +1329,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.44
+      "seconds": 12.13
     },
     "NI05": {
       "id": "NI05",
@@ -1504,7 +1360,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.28
+      "seconds": 8.86
     },
     "NI06": {
       "id": "NI06",
@@ -1535,7 +1391,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.95
+      "seconds": 4.76
     },
     "NI07": {
       "id": "NI07",
@@ -1566,7 +1422,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.05
+      "seconds": 4.85
     },
     "NI08": {
       "id": "NI08",
@@ -1597,38 +1453,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.29
-    },
-    "NI09": {
-      "id": "NI09",
-      "status": "not_found",
-      "answer": "I could not find this in your documents.",
-      "sources": [],
-      "question_used": "What documents are needed to apply for the loan?",
-      "retrieved": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.69
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 1,
-          "score": 0.662
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 2,
-          "score": 0.639
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.627
-        }
-      ],
-      "error": null,
-      "seconds": 8.17
+      "seconds": 8.15
     },
     "FU01": {
       "id": "FU01",
@@ -1664,7 +1489,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.61
+      "seconds": 10.63
     },
     "FU02": {
       "id": "FU02",
@@ -1700,7 +1525,7 @@
         }
       ],
       "error": null,
-      "seconds": 10.61
+      "seconds": 8.67
     },
     "FU03": {
       "id": "FU03",
@@ -1736,12 +1561,12 @@
         }
       ],
       "error": null,
-      "seconds": 10.64
+      "seconds": 6.89
     },
     "FU04": {
       "id": "FU04",
       "status": "answered",
-      "answer": "A bounce charge of Rs 500 applies each time an auto-debit or cheque payment fails for lack of funds.",
+      "answer": "If an auto-debit fails due to a lack of funds, a bounce charge of Rs 500 applies.",
       "sources": [
         {
           "source": "sample_loan.pdf",
@@ -1772,7 +1597,7 @@
         }
       ],
       "error": null,
-      "seconds": 10.13
+      "seconds": 24.15
     },
     "FU05": {
       "id": "FU05",
@@ -1808,7 +1633,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.61
+      "seconds": 19.43
     },
     "FU06": {
       "id": "FU06",
@@ -1844,7 +1669,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.22
+      "seconds": 8.35
     },
     "SC01": {
       "id": "SC01",
@@ -1880,7 +1705,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.32
+      "seconds": 12.04
     },
     "SC02": {
       "id": "SC02",
@@ -1916,43 +1741,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.62
-    },
-    "SC03": {
-      "id": "SC03",
-      "status": "answered",
-      "answer": "The annual sum insured for a family floater of up to four members is Rs 10,00,000.",
-      "sources": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "What is the sum insured for a family floater?",
-      "retrieved": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 1,
-          "score": 0.696
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 1,
-          "score": 0.688
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 2,
-          "score": 0.655
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.645
-        }
-      ],
-      "error": null,
-      "seconds": 6.32
+      "seconds": 8.3
     },
     "FI01": {
       "id": "FI01",
@@ -1983,7 +1772,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.26
+      "seconds": 9.63
     },
     "FI02": {
       "id": "FI02",
@@ -2019,12 +1808,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.95
+      "seconds": 5.35
     },
     "PA01": {
       "id": "PA01",
       "status": "answered",
-      "answer": "Before moving in, you must pay the monthly rent of Rs 25,000 and a security deposit equal to two months of rent (Rs 50,000), totaling Rs 75,000.",
+      "answer": "You must pay the first month's rent of Rs 25,000 plus a security deposit equal to two months of rent (Rs 50,000), totaling Rs 75,000.",
       "sources": [
         {
           "source": "sample_rental.pdf",
@@ -2055,7 +1844,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.32
+      "seconds": 5.34
     },
     "PA02": {
       "id": "PA02",
@@ -2091,7 +1880,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.86
+      "seconds": 7.63
     },
     "PA03": {
       "id": "PA03",
@@ -2127,7 +1916,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.4
+      "seconds": 15.6
     },
     "PA04": {
       "id": "PA04",
@@ -2163,7 +1952,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.49
+      "seconds": 7.17
     },
     "PA05": {
       "id": "PA05",
@@ -2199,7 +1988,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.9
+      "seconds": 8.06
     },
     "PA06": {
       "id": "PA06",
@@ -2235,7 +2024,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.63
+      "seconds": 5.34
     },
     "PA07": {
       "id": "PA07",
@@ -2271,7 +2060,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.52
+      "seconds": 6.01
     },
     "PA08": {
       "id": "PA08",
@@ -2307,7 +2096,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.14
+      "seconds": 7.2
     },
     "CF01": {
       "id": "CF01",
@@ -2343,7 +2132,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.22
+      "seconds": 6.81
     },
     "CF02": {
       "id": "CF02",
@@ -2379,7 +2168,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.86
+      "seconds": 6.77
     },
     "CF03": {
       "id": "CF03",
@@ -2415,7 +2204,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.28
+      "seconds": 12.13
     },
     "CF04": {
       "id": "CF04",
@@ -2451,12 +2240,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.76
+      "seconds": 6.29
     },
     "CF05": {
       "id": "CF05",
       "status": "answered",
-      "answer": "Either the tenant or the landlord must provide 2 months of written notice to terminate the rental agreement.",
+      "answer": "Either the tenant or the landlord must give 2 months of written notice to end the agreement.",
       "sources": [
         {
           "source": "sample_rental.pdf",
@@ -2487,7 +2276,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.59
+      "seconds": 6.08
     },
     "CF06": {
       "id": "CF06",
@@ -2523,7 +2312,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.17
+      "seconds": 5.05
     },
     "CF07": {
       "id": "CF07",
@@ -2559,12 +2348,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.34
+      "seconds": 5.98
     },
     "CF08": {
       "id": "CF08",
       "status": "answered",
-      "answer": "A billing dispute must be raised within 30 days of the bill date.",
+      "answer": "You must raise a billing dispute within 30 days of the bill date.",
       "sources": [
         {
           "source": "sample_mobile_plan.pdf",
@@ -2595,7 +2384,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.22
+      "seconds": 25.04
     },
     "CF09": {
       "id": "CF09",
@@ -2631,92 +2420,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.81
-    },
-    "CF10": {
-      "id": "CF10",
-      "status": "answered",
-      "answer": "Closing the account after 14 days costs Rs 500.",
-      "sources": [
-        {
-          "source": "sample_savings.pdf",
-          "page": 2
-        }
-      ],
-      "question_used": "What does it cost to close my savings account after the first two weeks?",
-      "retrieved": [
-        {
-          "source": "sample_savings.pdf",
-          "page": 2,
-          "score": 0.704
-        },
-        {
-          "source": "sample_savings.pdf",
-          "page": 1,
-          "score": 0.64
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.6
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 2,
-          "score": 0.6
-        }
-      ],
-      "error": null,
-      "seconds": 5.2
-    },
-    "AM01": {
-      "id": "AM01",
-      "status": "answered",
-      "answer": "The late fee depends on the agreement: for the loan, it is 2% per month on overdue EMIs; for the credit card, it is Rs 750 if the balance exceeds Rs 5,000; and for the rental agreement, it is 1.5% of the monthly rent per month of delay.",
-      "sources": [
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 1
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 3
-        },
-        {
-          "source": "sample_rental.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "What is the late fee?",
-      "retrieved": [
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.694
-        },
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 1,
-          "score": 0.677
-        },
-        {
-          "source": "sample_rental.pdf",
-          "page": 1,
-          "score": 0.646
-        },
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 2,
-          "score": 0.638
-        }
-      ],
-      "error": null,
-      "seconds": 6.15
+      "seconds": 19.54
     },
     "AM02": {
       "id": "AM02",
       "status": "answered",
-      "answer": "The interest rate depends on the product: the savings account offers 3.0% per year on balances up to Rs 5,00,000 and 3.5% per year on balances above that; the personal loan has a fixed interest rate of 10.5% per year; and the credit card charges 3.49% per month on unpaid balances.",
+      "answer": "The interest rate depends on the product: the savings account offers 3.0% per year on balances up to Rs 5,00,000 and 3.5% per year on balances above that; the Horizon Personal Loan has a fixed interest rate of 10.5% per year; and the Crown Card charges 3.49% interest per month on unpaid balances.",
       "sources": [
         {
           "source": "sample_credit_card.pdf",
@@ -2755,47 +2464,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.02
-    },
-    "AM03": {
-      "id": "AM03",
-      "status": "answered",
-      "answer": "You have 15 days to cancel an insurance policy after receiving it, and 7 days to return a laptop if it is unopened.",
-      "sources": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 4
-        },
-        {
-          "source": "sample_warranty.pdf",
-          "page": 2
-        }
-      ],
-      "question_used": "How many days do I have to cancel or return something?",
-      "retrieved": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.693
-        },
-        {
-          "source": "sample_warranty.pdf",
-          "page": 2,
-          "score": 0.66
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.627
-        },
-        {
-          "source": "sample_warranty.pdf",
-          "page": 1,
-          "score": 0.615
-        }
-      ],
-      "error": null,
-      "seconds": 5.53
+      "seconds": 9.61
     },
     "CO01": {
       "id": "CO01",
@@ -2831,12 +2500,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.51
+      "seconds": 10.84
     },
     "CO02": {
       "id": "CO02",
       "status": "answered",
-      "answer": "You receive 12 days of casual leave and 18 days of earned leave, totaling 30 days of leave per year.",
+      "answer": "You receive 12 days of casual leave and 18 days of earned leave per year, totaling 30 days of leave.",
       "sources": [
         {
           "source": "sample_job_offer.pdf",
@@ -2867,7 +2536,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.23
+      "seconds": 12.09
     },
     "CO03": {
       "id": "CO03",
@@ -2903,12 +2572,12 @@
         }
       ],
       "error": null,
-      "seconds": 5.64
+      "seconds": 5.37
     },
     "CO04": {
       "id": "CO04",
       "status": "answered",
-      "answer": "A cash advance fee of 2.5% of the amount is charged, with a minimum of Rs 500. For a Rs 10,000 cash advance, the fee is Rs 500.",
+      "answer": "A cash advance fee of 2.5% of the amount is charged, which for Rs 10,000 equals Rs 250; however, since there is a minimum fee of Rs 500, you would pay Rs 500.",
       "sources": [
         {
           "source": "sample_credit_card.pdf",
@@ -2939,7 +2608,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.92
+      "seconds": 14.65
     },
     "CO05": {
       "id": "CO05",
@@ -2975,7 +2644,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.7
+      "seconds": 15.41
     },
     "CO06": {
       "id": "CO06",
@@ -3011,79 +2680,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.36
-    },
-    "TY01": {
-      "id": "TY01",
-      "status": "answered",
-      "answer": "Conditions that existed before the policy started are covered only after 36 months of continuous coverage.",
-      "sources": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 2
-        }
-      ],
-      "question_used": "pre existing waitng period",
-      "retrieved": [
-        {
-          "source": "sample_policy.pdf",
-          "page": 2,
-          "score": 0.759
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 1,
-          "score": 0.663
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.66
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.652
-        }
-      ],
-      "error": null,
-      "seconds": 6.47
-    },
-    "TY02": {
-      "id": "TY02",
-      "status": "answered",
-      "answer": "The annual fee for the Crown Card is Rs 999, which is waived if the customer spends more than Rs 1,50,000 in the year.",
-      "sources": [
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "credit card anual fee",
-      "retrieved": [
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 1,
-          "score": 0.709
-        },
-        {
-          "source": "sample_credit_card.pdf",
-          "page": 2,
-          "score": 0.655
-        },
-        {
-          "source": "sample_savings.pdf",
-          "page": 2,
-          "score": 0.627
-        },
-        {
-          "source": "sample_savings.pdf",
-          "page": 1,
-          "score": 0.614
-        }
-      ],
-      "error": null,
-      "seconds": 5.86
+      "seconds": 20.92
     },
     "TY03": {
       "id": "TY03",
@@ -3119,43 +2716,7 @@
         }
       ],
       "error": null,
-      "seconds": 6.63
-    },
-    "TY04": {
-      "id": "TY04",
-      "status": "answered",
-      "answer": "The security deposit is returned within 30 days after the tenant vacates the flat.",
-      "sources": [
-        {
-          "source": "sample_rental.pdf",
-          "page": 1
-        }
-      ],
-      "question_used": "flat deposit refnd time",
-      "retrieved": [
-        {
-          "source": "sample_rental.pdf",
-          "page": 1,
-          "score": 0.667
-        },
-        {
-          "source": "sample_rental.pdf",
-          "page": 2,
-          "score": 0.662
-        },
-        {
-          "source": "sample_loan.pdf",
-          "page": 3,
-          "score": 0.616
-        },
-        {
-          "source": "sample_policy.pdf",
-          "page": 4,
-          "score": 0.608
-        }
-      ],
-      "error": null,
-      "seconds": 5.64
+      "seconds": 12.4
     },
     "TY05": {
       "id": "TY05",
@@ -3191,7 +2752,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.2
+      "seconds": 8.67
     },
     "CN01": {
       "id": "CN01",
@@ -3227,7 +2788,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.2
+      "seconds": 11.59
     },
     "CN02": {
       "id": "CN02",
@@ -3263,7 +2824,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.5
+      "seconds": 7.61
     },
     "CN03": {
       "id": "CN03",
@@ -3299,7 +2860,7 @@
         }
       ],
       "error": null,
-      "seconds": 12.6
+      "seconds": 33.86
     },
     "CN04": {
       "id": "CN04",
@@ -3335,12 +2896,12 @@
         }
       ],
       "error": null,
-      "seconds": 13.31
+      "seconds": 14.66
     },
     "CN05": {
       "id": "CN05",
       "status": "answered",
-      "answer": "Yes, if your savings balance falls below the minimum monthly average balance of Rs 5,000, a penalty of Rs 150 plus taxes is charged for the month.",
+      "answer": "Yes, if the balance is below the minimum monthly average balance of Rs 5,000, a penalty of Rs 150 plus taxes is charged for the month.",
       "sources": [
         {
           "source": "sample_savings.pdf",
@@ -3371,7 +2932,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.86
+      "seconds": 9.96
     },
     "CN06": {
       "id": "CN06",
@@ -3407,7 +2968,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.04
+      "seconds": 7.65
     },
     "TU01": {
       "id": "TU01",
@@ -3443,38 +3004,7 @@
         }
       ],
       "error": null,
-      "seconds": 4.96
-    },
-    "TU02": {
-      "id": "TU02",
-      "status": "not_found",
-      "answer": "I could not find this in your documents.",
-      "sources": [],
-      "question_used": "Does the laptop warranty cover the charger?",
-      "retrieved": [
-        {
-          "source": "sample_warranty.pdf",
-          "page": 2,
-          "score": 0.722
-        },
-        {
-          "source": "sample_warranty.pdf",
-          "page": 1,
-          "score": 0.705
-        },
-        {
-          "source": "sample_mobile_plan.pdf",
-          "page": 2,
-          "score": 0.583
-        },
-        {
-          "source": "sample_savings.pdf",
-          "page": 2,
-          "score": 0.582
-        }
-      ],
-      "error": null,
-      "seconds": 6.56
+      "seconds": 10.07
     },
     "TU03": {
       "id": "TU03",
@@ -3505,7 +3035,7 @@
         }
       ],
       "error": null,
-      "seconds": 8.97
+      "seconds": 9.72
     },
     "TU04": {
       "id": "TU04",
@@ -3536,7 +3066,7 @@
         }
       ],
       "error": null,
-      "seconds": 9.13
+      "seconds": 8.45
     },
     "TU05": {
       "id": "TU05",
@@ -3567,38 +3097,7 @@
         }
       ],
       "error": null,
-      "seconds": 5.55
-    },
-    "TU06": {
-      "id": "TU06",
-      "status": "not_found",
-      "answer": "I could not find this in your documents.",
-      "sources": [],
-      "question_used": "How much does it cost to cancel the mobile plan early?",
-      "retrieved": [
-        {
-          "source": "sample_mobile_plan.pdf",
-          "page": 1,
-          "score": 0.658
-        },
-        {
-          "source": "sample_mobile_plan.pdf",
-          "page": 2,
-          "score": 0.648
-        },
-        {
-          "source": "sample_savings.pdf",
-          "page": 2,
-          "score": 0.624
-        },
-        {
-          "source": "sample_rental.pdf",
-          "page": 2,
-          "score": 0.617
-        }
-      ],
-      "error": null,
-      "seconds": 6.56
+      "seconds": 18.9
     },
     "TU07": {
       "id": "TU07",
@@ -3629,7 +3128,414 @@
         }
       ],
       "error": null,
-      "seconds": 8.49
+      "seconds": 14.79
+    },
+    "PF02": {
+      "id": "PF02",
+      "status": "answered",
+      "answer": "The annual sum insured for a family floater of up to four members is Rs 10,00,000 per policy year.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How much is the sum insured for a family floater?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.7
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.692
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.662
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.649
+        }
+      ],
+      "error": null,
+      "seconds": 7.04
+    },
+    "LF06": {
+      "id": "LF06",
+      "status": "answered",
+      "answer": "The EMI is collected by auto-debit from the borrower's bank account.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "How is the EMI collected?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.71
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.662
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.658
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.654
+        }
+      ],
+      "error": null,
+      "seconds": 14.84
+    },
+    "LF07": {
+      "id": "LF07",
+      "status": "answered",
+      "answer": "No, the loan insurance cover is optional.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "Is the loan insurance cover compulsory?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.775
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.657
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.646
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.64
+        }
+      ],
+      "error": null,
+      "seconds": 15.04
+    },
+    "LF10": {
+      "id": "LF10",
+      "status": "answered",
+      "answer": "The minimum amount for a part-prepayment is Rs 25,000.",
+      "sources": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "What is the minimum amount for a part-prepayment?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.753
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.693
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.643
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.64
+        }
+      ],
+      "error": null,
+      "seconds": 8.89
+    },
+    "NI09": {
+      "id": "NI09",
+      "status": "not_found",
+      "answer": "I could not find this in your documents.",
+      "sources": [],
+      "question_used": "What documents are needed to apply for the loan?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.69
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 1,
+          "score": 0.662
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.639
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.627
+        }
+      ],
+      "error": null,
+      "seconds": 10.35
+    },
+    "SC03": {
+      "id": "SC03",
+      "status": "answered",
+      "answer": "The annual sum insured for a family floater of up to four members is Rs 10,00,000.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the sum insured for a family floater?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.696
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 1,
+          "score": 0.688
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 2,
+          "score": 0.655
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.645
+        }
+      ],
+      "error": null,
+      "seconds": 47.86
+    },
+    "CF10": {
+      "id": "CF10",
+      "status": "answered",
+      "answer": "Closing the account after 14 days costs Rs 500.",
+      "sources": [
+        {
+          "source": "sample_savings.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "What does it cost to close my savings account after the first two weeks?",
+      "retrieved": [
+        {
+          "source": "sample_savings.pdf",
+          "page": 2,
+          "score": 0.704
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 1,
+          "score": 0.64
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.6
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 2,
+          "score": 0.6
+        }
+      ],
+      "error": null,
+      "seconds": 11.89
+    },
+    "AM01": {
+      "id": "AM01",
+      "status": "answered",
+      "answer": "The late fee depends on the agreement: for the loan, it is 2% per month on overdue EMIs; for the credit card, it is Rs 750 if the balance exceeds Rs 5,000; and for the rental agreement, it is 1.5% of the monthly rent for every month of delay.",
+      "sources": [
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1
+        },
+        {
+          "source": "sample_loan.pdf",
+          "page": 3
+        },
+        {
+          "source": "sample_rental.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "What is the late fee?",
+      "retrieved": [
+        {
+          "source": "sample_loan.pdf",
+          "page": 3,
+          "score": 0.694
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.677
+        },
+        {
+          "source": "sample_rental.pdf",
+          "page": 1,
+          "score": 0.646
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 2,
+          "score": 0.638
+        }
+      ],
+      "error": null,
+      "seconds": 13.79
+    },
+    "AM03": {
+      "id": "AM03",
+      "status": "answered",
+      "answer": "You have 15 days to cancel the insurance policy after receiving it, and 7 days to return the laptop if it is unopened.",
+      "sources": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4
+        },
+        {
+          "source": "sample_warranty.pdf",
+          "page": 2
+        }
+      ],
+      "question_used": "How many days do I have to cancel or return something?",
+      "retrieved": [
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.693
+        },
+        {
+          "source": "sample_warranty.pdf",
+          "page": 2,
+          "score": 0.66
+        },
+        {
+          "source": "sample_policy.pdf",
+          "page": 4,
+          "score": 0.627
+        },
+        {
+          "source": "sample_warranty.pdf",
+          "page": 1,
+          "score": 0.615
+        }
+      ],
+      "error": null,
+      "seconds": 21.67
+    },
+    "TY01": {
+      "id": "TY01",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "RemoteProtocolError",
+      "seconds": 52.3
+    },
+    "TY02": {
+      "id": "TY02",
+      "status": "answered",
+      "answer": "The annual fee for the Crown Card is Rs 999, which is waived if the customer spends more than Rs 1,50,000 in the year.",
+      "sources": [
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1
+        }
+      ],
+      "question_used": "credit card anual fee",
+      "retrieved": [
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 1,
+          "score": 0.709
+        },
+        {
+          "source": "sample_credit_card.pdf",
+          "page": 2,
+          "score": 0.655
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 2,
+          "score": 0.627
+        },
+        {
+          "source": "sample_savings.pdf",
+          "page": 1,
+          "score": 0.614
+        }
+      ],
+      "error": null,
+      "seconds": 21.53
+    },
+    "TY04": {
+      "id": "TY04",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 4.38
+    },
+    "TU02": {
+      "id": "TU02",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 25.24
+    },
+    "TU06": {
+      "id": "TU06",
+      "status": null,
+      "answer": "",
+      "sources": [],
+      "question_used": null,
+      "retrieved": [],
+      "error": "ConnectError",
+      "seconds": 27.28
     },
     "TU08": {
       "id": "TU08",
@@ -3660,7 +3566,7 @@
         }
       ],
       "error": null,
-      "seconds": 7.91
+      "seconds": 35.32
     }
   }
 }
